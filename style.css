@@ -220,17 +220,24 @@ main {
   overflow: hidden;
 }
 
+.selected-gallery[hidden] {
+  display: none;
+}
+
 .selected-image-frame {
   display: grid;
-  min-height: 420px;
+  min-height: 340px;
   place-items: center;
   background: #070a2c;
+  padding: 18px;
 }
 
 .selected-image-frame img {
   display: block;
-  width: 100%;
-  max-height: 72vh;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(62vh, 620px);
   object-fit: contain;
 }
 

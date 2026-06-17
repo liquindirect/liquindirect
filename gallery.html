@@ -30,16 +30,14 @@
 
     <main>
       <section class="full-page-section">
-        <article class="selected-gallery" aria-live="polite">
+        <article class="selected-gallery" aria-live="polite" hidden>
           <div class="selected-image-frame">
-            <img id="selected-image" src="images/1761147969307.png" alt="Image 1" />
+            <img id="selected-image" src="" alt="" />
           </div>
           <div class="selected-description">
             <p class="section-label">Selected Image</p>
-            <h2 id="selected-title">Image 1</h2>
-            <p id="selected-text">
-              Description for Image 1. Replace this text with details about the image.
-            </p>
+            <h2 id="selected-title"></h2>
+            <p id="selected-text"></p>
           </div>
         </article>
 
@@ -265,6 +263,7 @@
       const selectedImage = document.getElementById("selected-image");
       const selectedTitle = document.getElementById("selected-title");
       const selectedText = document.getElementById("selected-text");
+      const selectedPanel = document.querySelector(".selected-gallery");
 
       galleryFigures.forEach((figure) => {
         figure.tabIndex = 0;
@@ -273,6 +272,7 @@
           const image = figure.querySelector("img");
           const caption = figure.querySelector("figcaption").textContent;
 
+          selectedPanel.hidden = false;
           selectedImage.src = image.src;
           selectedImage.alt = image.alt;
           selectedTitle.textContent = caption;
@@ -280,7 +280,7 @@
 
           galleryFigures.forEach((item) => item.classList.remove("is-selected"));
           figure.classList.add("is-selected");
-          document.querySelector(".selected-gallery").scrollIntoView({ behavior: "smooth", block: "start" });
+          selectedPanel.scrollIntoView({ behavior: "smooth", block: "start" });
         }
 
         figure.addEventListener("click", selectImage);
@@ -291,10 +291,6 @@
           }
         });
       });
-
-      if (galleryFigures.length > 0) {
-        galleryFigures[0].classList.add("is-selected");
-      }
     </script>
   </body>
 </html>
