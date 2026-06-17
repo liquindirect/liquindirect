@@ -229,6 +229,22 @@ main {
   object-fit: cover;
 }
 
+.media-placeholder {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  place-items: center;
+  align-content: center;
+  gap: 8px;
+  background: var(--ink);
+  color: #ffffff;
+}
+
+.media-placeholder span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+}
+
 .gallery-grid figcaption {
   padding: 12px 14px;
   color: var(--muted);
