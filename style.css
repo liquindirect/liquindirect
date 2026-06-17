@@ -368,11 +368,12 @@ main {
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--surface);
-  padding: 24px;
+  padding: 26px;
 }
 
 .countdown-panel p {
-  margin-bottom: 20px;
+  max-width: 640px;
+  margin: 0 0 22px;
   color: var(--ink);
   font-size: 1.12rem;
   font-weight: 800;
@@ -381,25 +382,28 @@ main {
 .countdown {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  gap: 14px;
 }
 
 .countdown span {
-  display: grid;
-  gap: 4px;
-  min-height: 124px;
-  place-items: center;
+  display: flex;
+  min-height: 118px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   border-radius: 8px;
   background: var(--ink);
   color: rgba(255, 255, 255, 0.76);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 800;
+  line-height: 1;
   text-transform: uppercase;
 }
 
 .countdown strong {
   color: #ffffff;
-  font-size: clamp(2.6rem, 6vw, 5rem);
+  font-size: clamp(2.4rem, 4.8vw, 4.15rem);
   line-height: 1;
 }
 
@@ -465,6 +469,10 @@ footer a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .countdown strong {
+    font-size: clamp(2.8rem, 12vw, 4.4rem);
+  }
+
   .hero {
     min-height: auto;
     padding-top: 34px;
@@ -492,6 +500,14 @@ footer a {
 
   .countdown {
     grid-template-columns: 1fr;
+  }
+
+  .countdown-panel {
+    padding: 18px;
+  }
+
+  .countdown span {
+    min-height: 102px;
   }
 
   .gallery-page-grid {
