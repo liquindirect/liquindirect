@@ -202,6 +202,19 @@ main {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.gallery-page-grid {
+  display: block;
+  column-count: 4;
+  column-gap: 14px;
+}
+
+.gallery-page-grid figure {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 14px;
+  break-inside: avoid;
+}
+
 .section-link {
   display: inline-flex;
   align-items: center;
@@ -225,8 +238,7 @@ main {
 .gallery-grid img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: auto;
 }
 
 .media-placeholder {
@@ -370,6 +382,10 @@ footer a {
     grid-template-columns: 1fr;
   }
 
+  .gallery-page-grid {
+    column-count: 2;
+  }
+
   .countdown {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -401,5 +417,9 @@ footer a {
 
   .countdown {
     grid-template-columns: 1fr;
+  }
+
+  .gallery-page-grid {
+    column-count: 1;
   }
 }
