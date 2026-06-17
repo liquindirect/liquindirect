@@ -3,16 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Category Website</title>
+    <title>Liquindo</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="site-header">
       <nav class="topbar" aria-label="Main navigation">
-        <a class="brand" href="#home">Category Hub</a>
+        <a class="brand" href="#home">Liquindo</a>
         <div class="nav-links">
-          <a href="#introduction">Introduction</a>
+          <a href="#home">Introduction</a>
           <a href="#history">History</a>
+          <a href="#ideology">Ideology</a>
+          <a href="#factions">Factions</a>
+          <a href="#members">Members</a>
+          <a href="#gallery">Gallery</a>
           <a href="#contact">Contact</a>
           <a href="#finance">Finance</a>
         </div>
@@ -20,44 +24,18 @@
 
       <section class="hero" id="home">
         <div class="hero-content">
-          <p class="eyebrow">Explore the key sections</p>
-          <h1>A simple website with clear category buttons.</h1>
+          <p class="eyebrow">Introduction</p>
+          <h1>Welcome to Liquindo.</h1>
           <p>
-            Use the buttons below to move around the page. Each section is set
-            up so you can replace the text with your own content.
+            This is the introduction section for your website. Add your main
+            message here so visitors understand what Liquindo is and what they
+            can explore on the site.
           </p>
-
-          <div class="category-buttons" aria-label="Category buttons">
-            <a class="category-button intro" href="#introduction">
-              <span>Introduction</span>
-            </a>
-            <a class="category-button history" href="#history">
-              <span>History</span>
-            </a>
-            <a class="category-button contact" href="#contact">
-              <span>Contact</span>
-            </a>
-            <a class="category-button finance" href="#finance">
-              <span>Finance</span>
-            </a>
-          </div>
         </div>
       </section>
     </header>
 
     <main>
-      <section class="content-section" id="introduction">
-        <div>
-          <p class="section-label">Introduction</p>
-          <h2>Welcome to the website</h2>
-        </div>
-        <p>
-          This section introduces your topic and explains what visitors can
-          expect to find. Add a short overview here so people understand the
-          purpose of the site right away.
-        </p>
-      </section>
-
       <section class="content-section split" id="history">
         <div>
           <p class="section-label">History</p>
@@ -79,12 +57,102 @@
         </div>
       </section>
 
+      <section class="content-section" id="ideology">
+        <div>
+          <p class="section-label">Ideology</p>
+          <h2>The Liquindian manifesto is being written!</h2>
+        </div>
+        <p>
+          This section will explain Liquindo's beliefs, principles, and vision
+          once the manifesto is ready.
+        </p>
+      </section>
+
+      <section class="content-section" id="factions">
+        <div>
+          <p class="section-label">Factions</p>
+          <h2>Groups and alliances</h2>
+        </div>
+        <div class="info-grid">
+          <article>
+            <strong>Faction One</strong>
+            <p>Add details about this faction, its role, and its goals.</p>
+          </article>
+          <article>
+            <strong>Faction Two</strong>
+            <p>Add details about another group and what makes it different.</p>
+          </article>
+          <article>
+            <strong>Faction Three</strong>
+            <p>Use this space for another faction or remove it if not needed.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="members">
+        <div>
+          <p class="section-label">Members</p>
+          <h2>People involved</h2>
+        </div>
+        <div class="info-grid">
+          <article>
+            <strong>Member Name</strong>
+            <p>Add a member's role, title, or short description here.</p>
+          </article>
+          <article>
+            <strong>Member Name</strong>
+            <p>Add a member's role, title, or short description here.</p>
+          </article>
+          <article>
+            <strong>Member Name</strong>
+            <p>Add a member's role, title, or short description here.</p>
+          </article>
+          <a class="section-link" href="members.html">View all our publicly identified members.</a>
+        </div>
+      </section>
+
+      <section class="content-section" id="gallery">
+        <div>
+          <p class="section-label">Gallery</p>
+          <h2>Images and highlights</h2>
+        </div>
+        <div class="gallery-grid">
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+              alt="People working together around a table"
+            />
+            <figcaption>Gallery image one</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
+              alt="Team using laptops"
+            />
+            <figcaption>Gallery image two</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80"
+              alt="Modern workspace"
+            />
+            <figcaption>Gallery image three</figcaption>
+          </figure>
+          <a class="section-link" href="gallery.html">View all images.</a>
+        </div>
+      </section>
+
       <section class="content-section" id="contact">
         <div>
           <p class="section-label">Contact</p>
           <h2>Get in touch</h2>
         </div>
-        <form class="contact-form">
+        <form
+          class="contact-form"
+          action="mailto:liquindohq@yahoo.com"
+          method="post"
+          enctype="text/plain"
+        >
           <label>
             Name
             <input type="text" name="name" placeholder="Your name" />
@@ -97,35 +165,76 @@
             Message
             <textarea name="message" rows="5" placeholder="Write your message"></textarea>
           </label>
-          <button type="button">Send Message</button>
+          <button type="submit">Send Message</button>
         </form>
       </section>
 
       <section class="content-section finance-section" id="finance">
         <div>
           <p class="section-label">Finance</p>
-          <h2>Money, planning, and useful numbers</h2>
+          <h2>Operational countdown</h2>
         </div>
-        <div class="finance-grid">
-          <article>
-            <strong>Budget</strong>
-            <p>Track income, spending, and savings goals.</p>
-          </article>
-          <article>
-            <strong>Investment</strong>
-            <p>Explain long-term planning and financial growth.</p>
-          </article>
-          <article>
-            <strong>Resources</strong>
-            <p>Add helpful links, tools, or facts for visitors.</p>
-          </article>
+        <div class="countdown-panel">
+          <p>Liquindo as a project will not be operational until 2028.</p>
+          <div class="countdown" aria-label="Countdown until 2028">
+            <span>
+              <strong id="days">000</strong>
+              Days
+            </span>
+            <span>
+              <strong id="hours">00</strong>
+              Hours
+            </span>
+            <span>
+              <strong id="minutes">00</strong>
+              Minutes
+            </span>
+            <span>
+              <strong id="seconds">00</strong>
+              Seconds
+            </span>
+          </div>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>Built for GitHub Pages. Edit the text to make it your own.</p>
+      <p>Contact: liquindohq@yahoo.com</p>
       <a href="#home">Back to top</a>
     </footer>
+    <script>
+      const launchDate = new Date("2028-01-01T00:00:00");
+      const units = {
+        days: document.getElementById("days"),
+        hours: document.getElementById("hours"),
+        minutes: document.getElementById("minutes"),
+        seconds: document.getElementById("seconds"),
+      };
+
+      function updateCountdown() {
+        const distance = launchDate - new Date();
+
+        if (distance <= 0) {
+          units.days.textContent = "000";
+          units.hours.textContent = "00";
+          units.minutes.textContent = "00";
+          units.seconds.textContent = "00";
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((distance / (1000 * 60)) % 60);
+        const seconds = Math.floor((distance / 1000) % 60);
+
+        units.days.textContent = String(days).padStart(3, "0");
+        units.hours.textContent = String(hours).padStart(2, "0");
+        units.minutes.textContent = String(minutes).padStart(2, "0");
+        units.seconds.textContent = String(seconds).padStart(2, "0");
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    </script>
   </body>
 </html>
