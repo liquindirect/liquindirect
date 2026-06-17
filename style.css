@@ -208,11 +208,71 @@ main {
   column-gap: 14px;
 }
 
+.selected-gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 28px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.selected-image-frame {
+  display: grid;
+  min-height: 420px;
+  place-items: center;
+  background: #070a2c;
+}
+
+.selected-image-frame img {
+  display: block;
+  width: 100%;
+  max-height: 72vh;
+  object-fit: contain;
+}
+
+.selected-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px;
+}
+
+.selected-description h2 {
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1;
+}
+
+.selected-description p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
 .gallery-page-grid figure {
   display: inline-block;
   width: 100%;
   margin: 0 0 14px;
   break-inside: avoid;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.gallery-page-grid figure:hover,
+.gallery-page-grid figure:focus {
+  border-color: var(--gold);
+  box-shadow: 0 12px 26px rgba(23, 33, 38, 0.16);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.gallery-page-grid figure.is-selected {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(216, 163, 26, 0.24);
 }
 
 .section-link {
@@ -386,6 +446,14 @@ footer a {
     column-count: 2;
   }
 
+  .selected-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .selected-image-frame {
+    min-height: 300px;
+  }
+
   .countdown {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -421,5 +489,9 @@ footer a {
 
   .gallery-page-grid {
     column-count: 1;
+  }
+
+  .selected-description {
+    padding: 22px;
   }
 }

@@ -30,6 +30,19 @@
 
     <main>
       <section class="full-page-section">
+        <article class="selected-gallery" aria-live="polite">
+          <div class="selected-image-frame">
+            <img id="selected-image" src="images/1761147969307.png" alt="Image 1" />
+          </div>
+          <div class="selected-description">
+            <p class="section-label">Selected Image</p>
+            <h2 id="selected-title">Image 1</h2>
+            <p id="selected-text">
+              Description for Image 1. Replace this text with details about the image.
+            </p>
+          </div>
+        </article>
+
         <div class="gallery-grid gallery-page-grid">
           <figure>
             <img src="images/1761147969307.png" alt="Image 1" />
@@ -247,5 +260,41 @@
       <p>Contact: liquindohq@yahoo.com</p>
       <a href="index.html">Back to main page</a>
     </footer>
+    <script>
+      const galleryFigures = document.querySelectorAll(".gallery-page-grid figure");
+      const selectedImage = document.getElementById("selected-image");
+      const selectedTitle = document.getElementById("selected-title");
+      const selectedText = document.getElementById("selected-text");
+
+      galleryFigures.forEach((figure) => {
+        figure.tabIndex = 0;
+
+        function selectImage() {
+          const image = figure.querySelector("img");
+          const caption = figure.querySelector("figcaption").textContent;
+
+          selectedImage.src = image.src;
+          selectedImage.alt = image.alt;
+          selectedTitle.textContent = caption;
+          selectedText.textContent = `Description for ${caption}. Replace this text with details about the image.`;
+
+          galleryFigures.forEach((item) => item.classList.remove("is-selected"));
+          figure.classList.add("is-selected");
+          document.querySelector(".selected-gallery").scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        figure.addEventListener("click", selectImage);
+        figure.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            selectImage();
+          }
+        });
+      });
+
+      if (galleryFigures.length > 0) {
+        galleryFigures[0].classList.add("is-selected");
+      }
+    </script>
   </body>
 </html>
