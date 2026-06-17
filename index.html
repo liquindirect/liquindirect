@@ -1,8 +1,131 @@
-<link rel="stylesheet" href="style.css">
-<h1> Week 1 of the Website <h1/>
-<h2> Message from Liquin <h2/>
-<p> Hello, I am in the first week of developing this website <p/>
-<h3> Introduction to Liquindo <h3/>
-<p> Liquindo is an idealistic project which may, or may not be achievable, about the collective purchase of an island, or sovereign territory where we can impose a new state under a new rule, that is not under the influence of the global elite and its liberal world order. It will be, many of you may not like to hear, a controlled by an economy and a class of the Third Position. <p/>
-<h4> Contact <h4/>
-<p> You can contact me via @liquindirect on both Discord or Telegram. <p/>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Category Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="topbar" aria-label="Main navigation">
+        <a class="brand" href="#home">Category Hub</a>
+        <div class="nav-links">
+          <a href="#introduction">Introduction</a>
+          <a href="#history">History</a>
+          <a href="#contact">Contact</a>
+          <a href="#finance">Finance</a>
+        </div>
+      </nav>
+
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <p class="eyebrow">Explore the key sections</p>
+          <h1>A simple website with clear category buttons.</h1>
+          <p>
+            Use the buttons below to move around the page. Each section is set
+            up so you can replace the text with your own content.
+          </p>
+
+          <div class="category-buttons" aria-label="Category buttons">
+            <a class="category-button intro" href="#introduction">
+              <span>Introduction</span>
+            </a>
+            <a class="category-button history" href="#history">
+              <span>History</span>
+            </a>
+            <a class="category-button contact" href="#contact">
+              <span>Contact</span>
+            </a>
+            <a class="category-button finance" href="#finance">
+              <span>Finance</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="content-section" id="introduction">
+        <div>
+          <p class="section-label">Introduction</p>
+          <h2>Welcome to the website</h2>
+        </div>
+        <p>
+          This section introduces your topic and explains what visitors can
+          expect to find. Add a short overview here so people understand the
+          purpose of the site right away.
+        </p>
+      </section>
+
+      <section class="content-section split" id="history">
+        <div>
+          <p class="section-label">History</p>
+          <h2>Background and important moments</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <span>Start</span>
+            <p>Explain where the topic began and why it became important.</p>
+          </article>
+          <article>
+            <span>Growth</span>
+            <p>Describe major changes, events, or achievements over time.</p>
+          </article>
+          <article>
+            <span>Today</span>
+            <p>Show what the topic looks like now and why it still matters.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="contact">
+        <div>
+          <p class="section-label">Contact</p>
+          <h2>Get in touch</h2>
+        </div>
+        <form class="contact-form">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" placeholder="Write your message"></textarea>
+          </label>
+          <button type="button">Send Message</button>
+        </form>
+      </section>
+
+      <section class="content-section finance-section" id="finance">
+        <div>
+          <p class="section-label">Finance</p>
+          <h2>Money, planning, and useful numbers</h2>
+        </div>
+        <div class="finance-grid">
+          <article>
+            <strong>Budget</strong>
+            <p>Track income, spending, and savings goals.</p>
+          </article>
+          <article>
+            <strong>Investment</strong>
+            <p>Explain long-term planning and financial growth.</p>
+          </article>
+          <article>
+            <strong>Resources</strong>
+            <p>Add helpful links, tools, or facts for visitors.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built for GitHub Pages. Edit the text to make it your own.</p>
+      <a href="#home">Back to top</a>
+    </footer>
+  </body>
+</html>
