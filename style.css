@@ -33,6 +33,7 @@ a {
 }
 
 .site-header {
+  position: relative;
   min-height: 100vh;
   background:
     linear-gradient(rgba(23, 33, 38, 0.44), rgba(23, 33, 38, 0.44)),
@@ -78,6 +79,31 @@ a {
 .nav-links a:hover {
   background: rgba(255, 255, 255, 0.16);
   transform: translateY(-2px);
+}
+
+.liquin-message {
+  position: absolute;
+  top: 76px;
+  right: min(6vw, 72px);
+  display: grid;
+  gap: 4px;
+  max-width: 310px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 8px;
+  background: rgba(23, 33, 38, 0.46);
+  padding: 10px 14px;
+  color: #ffffff;
+  font-size: 0.93rem;
+  backdrop-filter: blur(8px);
+}
+
+.liquin-message strong,
+.liquin-message span {
+  line-height: 1.35;
+}
+
+.liquin-message span {
+  color: rgba(255, 255, 255, 0.84);
 }
 
 .hero {
@@ -428,6 +454,12 @@ footer a {
 
   .nav-links {
     justify-content: flex-start;
+  }
+
+  .liquin-message {
+    position: static;
+    max-width: none;
+    margin: 0 min(6vw, 72px) 18px;
   }
 
   .content-section {
