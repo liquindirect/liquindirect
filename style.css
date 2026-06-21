@@ -36,7 +36,7 @@ a {
   position: relative;
   min-height: 100vh;
   background:
-    linear-gradient(rgba(23, 33, 38, 0.44), rgba(23, 33, 38, 0.44)),
+    linear-gradient(rgba(23, 33, 38, 0.68), rgba(23, 33, 38, 0.68)),
     url("images/liquindo-intro.png");
   background-position: center;
   background-size: cover;
@@ -109,8 +109,8 @@ a {
 .hero {
   display: flex;
   align-items: center;
-  min-height: calc(100vh - 86px);
-  padding: 40px min(6vw, 72px) 80px;
+  min-height: calc100vh;
+  padding: 80px min(6vw, 72px);
 }
 
 .hero-content {
@@ -156,8 +156,9 @@ a {
 .hero p:not(.eyebrow) {
   max-width: 620px;
   margin: 24px 0 34px;
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 1.1rem;
+  color: #ffffff;
+  font-size: 1.15rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
 }
 
 main {
@@ -539,4 +540,7 @@ footer a {
   .selected-description {
     padding: 22px;
   }
+}
+iframe[title="chat widget"] {
+  bottom: 90px !important;
 }
