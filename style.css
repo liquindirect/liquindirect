@@ -35,12 +35,13 @@ a {
 .site-header {
   position: relative;
   min-height: 100vh;
-background:
-  linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.55)),
-  url("images/liquindo-intro.png");
+  background:
+    linear-gradient(rgba(23, 33, 38, 0.68), rgba(23, 33, 38, 0.68)),
+    url("images/liquindo-intro.png");
   background-position: center;
-background-size: contain;
-background-repeat: no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--ink);
   color: #ffffff;
 }
 
