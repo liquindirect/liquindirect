@@ -149,6 +149,11 @@ a {
   margin: 0;
   font-size: clamp(2.6rem, 7vw, 5.8rem);
   line-height: 0.96;
+  color: #ffffff;
+  font-weight: 900;
+  text-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.65),
+    0 0 30px rgba(0, 0, 0, 0.35);
 }
 
 .hero p:not(.eyebrow) {
