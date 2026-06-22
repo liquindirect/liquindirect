@@ -34,32 +34,11 @@ a {
 
 .site-header {
   position: relative;
-  min-height: 100vh;
-  background-color: var(--ink);
-  color: #ffffff;
-  overflow: hidden;
-}
-
-.site-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("images/liquindo-intro.png") center center no-repeat;
-  background-size: contain;
-  z-index: 0;
-}
-
-.site-header::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(23, 33, 38, 0.68);
-  z-index: 1;
-}
-
-.site-header > * {
-  position: relative;
-  z-index: 2;
+  aspect-ratio: 3 / 2;
+  min-height: 0;
+  background:
+    linear-gradient(rgba(23,33,38,0.55), rgba(23,33,38,0.55)),
+    url("images/liquindo-intro.png") center/contain no-repeat;
 }
 
 .page-header {
