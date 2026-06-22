@@ -35,45 +35,14 @@ a {
 .site-header {
   position: relative;
   min-height: 100vh;
-  background-color: var(--ink);
-  color: #ffffff;
-  overflow: hidden;
-}
-
-.site-header {
-  position: relative;
-  min-height: 100vh;
-  background-color: var(--ink);
-  color: #ffffff;
-  overflow: hidden;
-}
-
-.site-header {
-  position: relative;
-  min-height: 100vh;
   background:
     linear-gradient(rgba(23, 33, 38, 0.68), rgba(23, 33, 38, 0.68)),
     url("images/liquindo-intro.png");
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-}
-
-.topbar,
-.hero,
-.liquin-message {
-  position: relative;
-  z-index: 2;
   color: #ffffff;
-}
-
-.brand,
-.topbar a,
-.hero h1,
-.hero p,
-.hero .eyebrow,
-.liquin-message {
-  color: #ffffff;
+  overflow: hidden;
 }
 
 .topbar,
@@ -159,7 +128,7 @@ a {
 .hero {
   display: flex;
   align-items: center;
-  min-height: calc100vh;
+  min-height: calc(100vh);
   padding: 80px min(6vw, 72px);
 }
 
