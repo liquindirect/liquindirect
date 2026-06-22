@@ -39,7 +39,8 @@ background:
   linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.55)),
   url("images/liquindo-intro.png");
   background-position: center;
-  background-size: cover;
+background-size: contain;
+background-repeat: no-repeat;
   color: #ffffff;
 }
 
