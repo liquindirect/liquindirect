@@ -279,7 +279,7 @@ main {
   display: grid;
   min-height: 340px;
   place-items: center;
-  background: #070a2c;
+  background: linear-gradient(135deg, #ffffff 0%, #f7f4ee 50%, #070a2c 100%);
   padding: 18px;
 }
 
