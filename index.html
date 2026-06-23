@@ -11,18 +11,28 @@
       <nav class="topbar" aria-label="Main navigation">
         <a class="brand" href="#home">Liquindo</a>
         <div class="nav-links">
-          <a href="#home">Introduction</a>
-          <a href="#history">History</a>
-          <a href="#ideology">Ideology</a>
-          <a href="#members">Members</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact</a>
-          <a href="#finance">Finance</a>
+          <a href="#home" data-i18n="nav.introduction">Introduction</a>
+          <a href="#history" data-i18n="nav.history">History</a>
+          <a href="#ideology" data-i18n="nav.ideology">Ideology</a>
+          <a href="#members" data-i18n="nav.members">Members</a>
+          <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <a href="#finance" data-i18n="nav.finance">Finance</a>
         </div>
+        <select id="language-switcher" class="language-switcher" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="ru">Русский</option>
+          <option value="pt">Português</option>
+          <option value="pl">Polski</option>
+          <option value="zh">中文</option>
+        </select>
       </nav>
       <aside class="liquin-message">
-        <strong>Message from Liquin: Week 2</strong>
-        <span>Hello, welcome to the Liquindo website! Improvements are slow, they will ramp up temporarily after the 17th of July.</span>
+        <strong data-i18n="message.title">Message from Liquin: Week 2</strong>
+        <span data-i18n="message.text">Hello, welcome to the Liquindo website! Improvements are slow, they will ramp up temporarily after the 17th of July.</span>
       </aside>
       
       <!-- Tawk settings -->
@@ -58,9 +68,9 @@ Tawk_API.customStyle = {
 
       <section class="hero" id="home">
         <div class="hero-content">
-          <p class="eyebrow">Introduction</p>
-          <h1>Welcome to Liquindo.</h1>
-          <p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Introduction</p>
+          <h1 data-i18n="hero.title">Welcome to Liquindo.</h1>
+          <p data-i18n="hero.description">
             Liquindo is an idealistic project about the collective purchase of
             an island, or sovereign territory where we can impose a new
             nationstate that is not under the influence of the global elite and
@@ -74,8 +84,8 @@ Tawk_API.customStyle = {
     <main>
 <section class="content-section" id="history">
   <div>
-    <p class="section-label">History</p>
-    <h2>Background and important moments</h2>
+    <p class="section-label" data-i18n="section.history">History</p>
+    <h2 data-i18n="section.history.title">Background and important moments</h2>
   </div>
 
   <div class="timeline">
@@ -108,10 +118,10 @@ Tawk_API.customStyle = {
 </section>
       <section class="content-section" id="ideology">
         <div>
-          <p class="section-label">Ideology</p>
-          <h2>The Liquindian manifesto is being written!</h2>
+          <p class="section-label" data-i18n="section.ideology">Ideology</p>
+          <h2 data-i18n="section.ideology.title">The Liquindian manifesto is being written!</h2>
         </div>
-        <p>
+        <p data-i18n="section.ideology.description">
           This section will explain Liquindo's beliefs, principles, and vision
           once the manifesto is ready.
         </p>
@@ -119,30 +129,30 @@ Tawk_API.customStyle = {
       
       <section class="content-section" id="members">
         <div>
-          <p class="section-label">Members</p>
-          <h2>People involved</h2>
+          <p class="section-label" data-i18n="section.members">Members</p>
+          <h2 data-i18n="section.members.title">People involved</h2>
         </div>
         <div class="info-grid">
           <article>
-            <strong>Diego Liquin</strong>
-            <p>The founder of Liquindo, and its main ideologue.</p>
+            <strong data-i18n="member.diego">Diego Liquin</strong>
+            <p data-i18n="member.diego.desc">The founder of Liquindo, and its main ideologue.</p>
           </article>
           <article>
-            <strong>Doctor Fullwood</strong>
-            <p>Liquin's main advisor and trustee.</p>
+            <strong data-i18n="member.fullwood">Doctor Fullwood</strong>
+            <p data-i18n="member.fullwood.desc">Liquin's main advisor and trustee.</p>
           </article>
           <article>
-            <strong>Edison the Mentor</strong>
-            <p>Liquin's political and philosophical mentor.</p>
+            <strong data-i18n="member.edison">Edison the Mentor</strong>
+            <p data-i18n="member.edison.desc">Liquin's political and philosophical mentor.</p>
           </article>
-          <a class="section-link" href="members.html">View all our publicly identified members.</a>
+          <a class="section-link" href="members.html" data-i18n="link.members">View all our publicly identified members.</a>
         </div>
       </section>
 
       <section class="content-section" id="gallery">
         <div>
-          <p class="section-label">Gallery</p>
-          <h2>Images and highlights</h2>
+          <p class="section-label" data-i18n="section.gallery">Gallery</p>
+          <h2 data-i18n="section.gallery.title">Images and highlights</h2>
         </div>
         <div class="gallery-grid">
           <figure>
@@ -166,18 +176,18 @@ Tawk_API.customStyle = {
             />
             <figcaption>Image 9</figcaption>
           </figure>
-          <a class="section-link" href="gallery.html">View all images.</a>
+          <a class="section-link" href="gallery.html" data-i18n="link.gallery">View all images.</a>
         </div>
       </section>
 
       <section class="content-section" id="contact">
         <div>
-          <p class="section-label">Contact</p>
-          <h2>Get in touch</h2>
+          <p class="section-label" data-i18n="section.contact">Contact</p>
+          <h2 data-i18n="section.contact.title">Get in touch</h2>
         </div>
         <div class="contact-card">
-          <p>Send Liquindo a message directly by email.</p>
-          <a class="email-button" href="mailto:liquindohq@yahoo.com">
+          <p data-i18n="section.contact.message">Send Liquindo a message directly by email.</p>
+          <a class="email-button" href="mailto:liquindohq@yahoo.com" data-i18n="link.email">
             Email liquindohq@yahoo.com
           </a>
         </div>
@@ -185,27 +195,27 @@ Tawk_API.customStyle = {
 
       <section class="content-section finance-section" id="finance">
         <div>
-          <p class="section-label">Finance</p>
-          <h2>Operational countdown</h2>
+          <p class="section-label" data-i18n="section.finance">Finance</p>
+          <h2 data-i18n="section.finance.title">Operational countdown</h2>
         </div>
         <div class="countdown-panel">
-          <p>Liquindo as a project will not be operational until 2028.</p>
+          <p data-i18n="section.finance.description">Liquindo as a project will not be operational until 2028.</p>
           <div class="countdown" aria-label="Countdown until 2028">
             <span>
               <strong id="days">000</strong>
-              Days
+              <span data-i18n="countdown.days">Days</span>
             </span>
             <span>
               <strong id="hours">00</strong>
-              Hours
+              <span data-i18n="countdown.hours">Hours</span>
             </span>
             <span>
               <strong id="minutes">00</strong>
-              Minutes
+              <span data-i18n="countdown.minutes">Minutes</span>
             </span>
             <span>
               <strong id="seconds">00</strong>
-              Seconds
+              <span data-i18n="countdown.seconds">Seconds</span>
             </span>
           </div>
         </div>
@@ -213,9 +223,10 @@ Tawk_API.customStyle = {
     </main>
 
     <footer>
-      <p>Contact: liquindohq@yahoo.com</p>
-      <a href="#home">Back to top</a>
+      <p data-i18n="footer.contact">Contact: liquindohq@yahoo.com</p>
+      <a href="#home" data-i18n="footer.top">Back to top</a>
     </footer>
+    <script src="i18n.js"></script>
     <script>
       const launchDate = new Date("2028-01-01T00:00:00");
       const units = {
