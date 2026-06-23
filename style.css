@@ -73,6 +73,7 @@ a {
   justify-content: space-between;
   gap: 24px;
   padding: 22px min(6vw, 72px);
+  flex-wrap: wrap;
 }
 
 .brand {
@@ -85,6 +86,7 @@ a {
   flex-wrap: wrap;
   gap: 10px;
   justify-content: flex-end;
+  flex: 1;
 }
 
 .nav-links a {
@@ -98,6 +100,35 @@ a {
 .nav-links a:hover {
   background: rgba(255, 255, 255, 0.16);
   transform: translateY(-2px);
+}
+
+.language-switcher {
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.93rem;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  font-weight: 600;
+  min-width: 110px;
+}
+
+.language-switcher:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-2px);
+}
+
+.language-switcher option {
+  background: var(--ink);
+  color: #ffffff;
+  padding: 8px 14px;
+  border: none;
+}
+
+.language-switcher option:hover {
+  background: var(--teal);
 }
 
 .liquin-message {
@@ -479,6 +510,11 @@ footer a {
 
   .nav-links {
     justify-content: flex-start;
+    flex: none;
+  }
+
+  .language-switcher {
+    align-self: flex-start;
   }
 
   .liquin-message {
@@ -564,7 +600,14 @@ footer a {
   .selected-description {
     padding: 22px;
   }
+
+  .language-switcher {
+    min-width: 90px;
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
 }
+
 iframe[title="chat widget"] {
   bottom: 90px !important;
 }
